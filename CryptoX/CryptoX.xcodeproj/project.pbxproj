@@ -14,8 +14,8 @@
 		A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */; };
 		CEF611A6203CC65100A945E0 /* IntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF611A4203CC65100A945E0 /* IntroVC.m */; };
 		CEF611A7203CC65100A945E0 /* IntroVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF611A5203CC65100A945E0 /* IntroVC.xib */; };
-		F7348BFC203CCA30001D683C /* TwitterFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7348BFA203CCA30001D683C /* TwitterFeedVC.swift */; };
-		F7348BFD203CCA30001D683C /* TwitterFeedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7348BFB203CCA30001D683C /* TwitterFeedVC.xib */; };
+		F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */; };
+		F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7348C0B203CE064001D683C /* Twitter.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		CEF611A3203CC65100A945E0 /* IntroVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroVC.h; sourceTree = "<group>"; };
 		CEF611A4203CC65100A945E0 /* IntroVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroVC.m; sourceTree = "<group>"; };
 		CEF611A5203CC65100A945E0 /* IntroVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroVC.xib; sourceTree = "<group>"; };
-		F7348BFA203CCA30001D683C /* TwitterFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedVC.swift; sourceTree = "<group>"; };
-		F7348BFB203CCA30001D683C /* TwitterFeedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterFeedVC.xib; sourceTree = "<group>"; };
+		F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedVC.swift; sourceTree = "<group>"; };
+		F7348C0B203CE064001D683C /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +64,12 @@
 		A3F0C231203CBE2B0099EE2E /* CryptoX */ = {
 			isa = PBXGroup;
 			children = (
+				F7348C0A203CE03A001D683C /* Storyboards */,
 				F7348BF9203CCA0E001D683C /* Twitter */,
-				CEF611A8203CC66100A945E0 /* Utilities  */,
+				CEF611A8203CC66100A945E0 /* Utilities */,
 				CEF6119D203CC5AF00A945E0 /* Introduction */,
 				A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */,
 				A3F0C234203CBE2B0099EE2E /* ViewController.swift */,
-				A3F0C236203CBE2B0099EE2E /* Main.storyboard */,
 				A3F0C239203CBE2B0099EE2E /* Assets.xcassets */,
 				A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */,
 				A3F0C23E203CBE2B0099EE2E /* Info.plist */,
@@ -87,21 +87,29 @@
 			path = Introduction;
 			sourceTree = "<group>";
 		};
-		CEF611A8203CC66100A945E0 /* Utilities  */ = {
+		CEF611A8203CC66100A945E0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				CEF611A2203CC65100A945E0 /* CryptoX-Bridging-Header.h */,
 			);
-			path = "Utilities ";
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F7348BF9203CCA0E001D683C /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				F7348BFA203CCA30001D683C /* TwitterFeedVC.swift */,
-				F7348BFB203CCA30001D683C /* TwitterFeedVC.xib */,
+				F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */,
 			);
 			path = Twitter;
+			sourceTree = "<group>";
+		};
+		F7348C0A203CE03A001D683C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3F0C236203CBE2B0099EE2E /* Main.storyboard */,
+				F7348C0B203CE064001D683C /* Twitter.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */,
+				F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */,
 				A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */,
-				F7348BFD203CCA30001D683C /* TwitterFeedVC.xib in Resources */,
 				A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */,
 				CEF611A7203CC65100A945E0 /* IntroVC.xib in Resources */,
 			);
@@ -181,7 +189,7 @@
 			files = (
 				CEF611A6203CC65100A945E0 /* IntroVC.m in Sources */,
 				A3F0C235203CBE2B0099EE2E /* ViewController.swift in Sources */,
-				F7348BFC203CCA30001D683C /* TwitterFeedVC.swift in Sources */,
+				F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */,
 				A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +334,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.beco.CryptoX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Introduction/CryptoX-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Utilities/CryptoX-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,7 +352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.beco.CryptoX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Introduction/CryptoX-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Utilities/CryptoX-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
