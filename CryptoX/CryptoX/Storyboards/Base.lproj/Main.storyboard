@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,33 +37,85 @@
                                 <rect key="frame" x="0.0" y="116" width="414" height="620"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xVN-n2-KO8">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="179" height="254"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionCell" reuseIdentifier="CollectionCell" id="hEv-34-EJm" customClass="CustomCollectionCell" customModule="CryptoX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="20" y="0.0" width="179" height="254"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="179" height="254"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-d5-1cq">
+                                                    <rect key="frame" x="16" y="16" width="53" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1wJ-1R-AAu">
+                                                    <rect key="frame" x="113" y="188" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="2xj-fb-idn"/>
+                                                        <constraint firstAttribute="width" constant="50" id="dN5-FQ-IGb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-Oi-0LN">
+                                                    <rect key="frame" x="128" y="16" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-Ia-rIn">
+                                                    <rect key="frame" x="16" y="45" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="A1T-Ia-rIn" firstAttribute="leading" secondItem="hEv-34-EJm" secondAttribute="leadingMargin" constant="8" id="2jC-3W-oSa"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Ne8-Oi-0LN" secondAttribute="trailing" constant="8" id="3UB-ga-0cH"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="1wJ-1R-AAu" secondAttribute="bottom" constant="8" id="JWQ-zU-uHe"/>
+                                            <constraint firstItem="Ne8-Oi-0LN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1dt-d5-1cq" secondAttribute="trailing" constant="8" id="S6s-j1-cWe"/>
+                                            <constraint firstItem="1dt-d5-1cq" firstAttribute="top" secondItem="hEv-34-EJm" secondAttribute="topMargin" constant="8" id="Tqj-K2-nGW"/>
+                                            <constraint firstItem="A1T-Ia-rIn" firstAttribute="top" secondItem="1dt-d5-1cq" secondAttribute="bottom" constant="8" id="U1H-3M-9kC"/>
+                                            <constraint firstItem="Ne8-Oi-0LN" firstAttribute="top" secondItem="hEv-34-EJm" secondAttribute="topMargin" constant="8" id="WXH-li-wJx"/>
+                                            <constraint firstItem="1dt-d5-1cq" firstAttribute="leading" secondItem="hEv-34-EJm" secondAttribute="leadingMargin" constant="8" id="fqx-WI-6iN"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="1wJ-1R-AAu" secondAttribute="trailing" constant="8" id="uGg-z2-jqJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="coinLogo" destination="1wJ-1R-AAu" id="Hie-v2-48P"/>
+                                            <outlet property="nameLabel" destination="1dt-d5-1cq" id="ges-4y-seP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-jb-eN4" customClass="CustomButton" customModule="CryptoX" customModuleProvider="target">
+                                <rect key="frame" x="177" y="636" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="btY-h4-l16"/>
+                                    <constraint firstAttribute="width" constant="60" id="dgf-tU-HMF"/>
+                                </constraints>
+                                <state key="normal" image="ic_add_circle_48pt_3x"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YOq-p9-zRM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1uW-KO-WFF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UeA-jb-eN4" secondAttribute="bottom" constant="40" id="9sD-Pa-TNo"/>
                             <constraint firstItem="iKE-ce-8BH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="CS3-Po-NF4"/>
                             <constraint firstItem="YOq-p9-zRM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GAf-SI-mVb"/>
                             <constraint firstItem="iKE-ce-8BH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HVh-sb-Fkt"/>
                             <constraint firstItem="iKE-ce-8BH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Klu-Qo-KYY"/>
                             <constraint firstItem="YOq-p9-zRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Thw-C6-SH9"/>
                             <constraint firstItem="iKE-ce-8BH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XMy-xL-TtD"/>
+                            <constraint firstItem="UeA-jb-eN4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zet-Jd-t2I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -72,10 +125,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="31.884057971014496" y="31.793478260869566"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="58" height="32"/>
+        <image name="ic_add_circle_48pt_3x" width="120" height="120"/>
     </resources>
 </document>

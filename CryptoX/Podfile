@@ -10,5 +10,6 @@ target 'CryptoX' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'Charts'
+    pod 'SDWebImage'
 
 end

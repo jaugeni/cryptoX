@@ -19,6 +19,13 @@ class CoinsList: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         coinCollection.delegate = self
         coinCollection.dataSource = self
+        
+        DataService.share.getCoinBaseInfo(coinSymbol: "BTC", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
+                print(DataService.share.myCoins)
+            }
+        }
     }
 
 
@@ -31,11 +38,14 @@ extension CoinsList: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return DataService.share.myCoins.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as? CustomCollectionCell {
+            
+            cell.setCell(coinInfo: DataService.share.myCoins[indexPath.row])
+            
             return cell
         }
         return CustomCollectionCell()
@@ -47,7 +57,7 @@ extension CoinsList: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         let spaceBetweenCells: CGFloat = 10
         let padding: CGFloat = 40
         let cellDimention = ((collectionView.bounds.width - padding) - (numberOfCollums - 1) * spaceBetweenCells) / numberOfCollums
-        return CGSize(width: cellDimention, height: cellDimention)
+        return CGSize(width: cellDimention, height: cellDimention + cellDimention / 2)
         
     }
 
