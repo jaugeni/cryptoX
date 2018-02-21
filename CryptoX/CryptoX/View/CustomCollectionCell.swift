@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 
+
+
 class CustomCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -17,7 +19,7 @@ class CustomCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var currentPrice: UILabel!
     
-    var bitcoinName = ""
+//    var currentCoint = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +33,7 @@ class CustomCollectionCell: UICollectionViewCell {
             currentPrice.text = price
         }
         
-        bitcoinName = coinInfo.coinName
+//        currentCoint = coinInfo.coinName
     }
     
     func setUpView() {
@@ -45,8 +47,8 @@ class CustomCollectionCell: UICollectionViewCell {
         self.clipsToBounds = false
     }
     
-    @IBAction func twitterPressed(_ sender: Any) {
-        
-    }
+//    @IBAction func twitterPressed(_ sender: Any) {
+//        NAME_PICKED = currentCoint
+//    }
 
 }

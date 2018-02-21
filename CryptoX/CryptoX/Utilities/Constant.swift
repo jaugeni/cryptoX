@@ -20,3 +20,8 @@ let URL_FSYM = "fsym="
 let URL_TSYMS = "&tsyms="
 
 let URL_IMAGE_BASE = "https://www.cryptocompare.com"
+
+
+//Segue
+
+let SEGUE_TO_TWITTER = "toTwitter"

@@ -15,7 +15,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     @IBOutlet weak var pickerOutlet: UIPickerView!
     
     
-    var namePicked = String()
+    var namePicked = ""
     var tweet : [String] = []
     
     func getArray (dictonaryName : [String : String])-> [String]{
@@ -28,8 +28,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     
     
     
-    let famousCyrpto = ["Bitcoin", "Ripple", "Litcoin", "Dash", "Etherum", "Tron"]
-    let bg = ["Red", "Blu", "Green"]
+    let famousCyrpto = ["Bitcoin", "Ripple", "Litcoin", "DigitalCash", "Ethereum", "Tronix"]
     
     let bitcoin = ["Coinbase" : "https://twitter.com/coinbase","Bitcoin News" : "https://twitter.com/BTCTN", "Bitcoin Foundation" : "https://twitter.com/BTCFoundation"]
     let ripple = ["Ripple Main":"https://twitter.com/Ripple", "Brad Garling/Ceo":"https://twitter.com/bgarlinghouse" , "Binace":"https://twitter.com/binance_2017"]
@@ -52,13 +51,13 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
         if namePicked == "Litcoin" {
             return litcoin
         }
-        if namePicked == "Dash"{
+        if namePicked == "DigitalCash"{
             return dash
         }
         if namePicked == "Etherum" {
             return ethereum
         }
-        if namePicked == "tron" {
+        if namePicked == "Tronix" {
             return tron
         }
         
@@ -210,26 +209,12 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
         self.view.endEditing(true)
     }
     
-    
-    
-    
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
     
 }

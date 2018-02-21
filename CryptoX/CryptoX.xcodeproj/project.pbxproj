@@ -22,7 +22,6 @@
 		A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C239203CBE2B0099EE2E /* Assets.xcassets */; };
 		A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */; };
 		E0A1A74EEFD7358FE87E6CEB /* Pods_CryptoX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B78877C1CB759A6175979 /* Pods_CryptoX.framework */; };
-		F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7348C0B203CE064001D683C /* Twitter.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		A3F0C23C203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F0C23E203CBE2B0099EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71729D84EDB3F1A92DE7E82 /* Pods-CryptoX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX.debug.xcconfig"; sourceTree = "<group>"; };
-		F7348C0B203CE064001D683C /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				A3F0C236203CBE2B0099EE2E /* Main.storyboard */,
-				F7348C0B203CE064001D683C /* Twitter.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */,
-				F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */,
 				A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */,
 				A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */,
 			);
