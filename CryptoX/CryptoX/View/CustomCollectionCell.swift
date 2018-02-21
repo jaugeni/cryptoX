@@ -15,6 +15,10 @@ class CustomCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var coinLogo: UIImageView!
     
+    @IBOutlet weak var currentPrice: UILabel!
+    
+    var bitcoinName = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setUpView()
@@ -23,6 +27,11 @@ class CustomCollectionCell: UICollectionViewCell {
     func setCell(coinInfo: CoinInfo) {
         nameLabel.text = coinInfo.coinName
         coinLogo.sd_setImage(with: URL(string: URL_IMAGE_BASE + coinInfo.imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+        if let price = coinInfo.currentPrice {
+            currentPrice.text = price
+        }
+        
+        bitcoinName = coinInfo.coinName
     }
     
     func setUpView() {
@@ -36,4 +45,8 @@ class CustomCollectionCell: UICollectionViewCell {
         self.clipsToBounds = false
     }
     
+    @IBAction func twitterPressed(_ sender: Any) {
+        
+    }
+
 }

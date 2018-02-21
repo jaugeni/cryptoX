@@ -15,5 +15,8 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let URL_BASE = "https://min-api.cryptocompare.com/data/"
 let URL_EXTRA = "&extraParams=cryptox"
 let URL_ALL_COINS = "\(URL_BASE)all/coinlist"
+let URL_PRICE = "\(URL_BASE)price?"
+let URL_FSYM = "fsym="
+let URL_TSYMS = "&tsyms="
 
 let URL_IMAGE_BASE = "https://www.cryptocompare.com"

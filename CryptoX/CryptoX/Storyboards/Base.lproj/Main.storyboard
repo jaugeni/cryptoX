@@ -51,7 +51,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-d5-1cq">
-                                                    <rect key="frame" x="16" y="16" width="53" height="21"/>
+                                                    <rect key="frame" x="16" y="16" width="147" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -63,34 +63,40 @@
                                                         <constraint firstAttribute="width" constant="50" id="dN5-FQ-IGb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-Oi-0LN">
-                                                    <rect key="frame" x="128" y="16" width="35" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-Ia-rIn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A1T-Ia-rIn">
                                                     <rect key="frame" x="16" y="45" width="39" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKP-xp-CfR">
+                                                    <rect key="frame" x="16" y="188" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="HfS-N0-eqt"/>
+                                                        <constraint firstAttribute="height" constant="50" id="jbT-ZU-X7L"/>
+                                                    </constraints>
+                                                    <state key="normal" image="580b57fcd9996e24bc43c53e"/>
+                                                    <connections>
+                                                        <action selector="twitterPressed:" destination="hEv-34-EJm" eventType="touchUpInside" id="hlw-sD-AOz"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="A1T-Ia-rIn" firstAttribute="leading" secondItem="hEv-34-EJm" secondAttribute="leadingMargin" constant="8" id="2jC-3W-oSa"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="Ne8-Oi-0LN" secondAttribute="trailing" constant="8" id="3UB-ga-0cH"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="1wJ-1R-AAu" secondAttribute="bottom" constant="8" id="JWQ-zU-uHe"/>
-                                            <constraint firstItem="Ne8-Oi-0LN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1dt-d5-1cq" secondAttribute="trailing" constant="8" id="S6s-j1-cWe"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="HKP-xp-CfR" secondAttribute="bottom" constant="8" id="L3I-WZ-mXQ"/>
+                                            <constraint firstItem="HKP-xp-CfR" firstAttribute="leading" secondItem="hEv-34-EJm" secondAttribute="leadingMargin" constant="8" id="QyF-fb-fah"/>
                                             <constraint firstItem="1dt-d5-1cq" firstAttribute="top" secondItem="hEv-34-EJm" secondAttribute="topMargin" constant="8" id="Tqj-K2-nGW"/>
                                             <constraint firstItem="A1T-Ia-rIn" firstAttribute="top" secondItem="1dt-d5-1cq" secondAttribute="bottom" constant="8" id="U1H-3M-9kC"/>
-                                            <constraint firstItem="Ne8-Oi-0LN" firstAttribute="top" secondItem="hEv-34-EJm" secondAttribute="topMargin" constant="8" id="WXH-li-wJx"/>
                                             <constraint firstItem="1dt-d5-1cq" firstAttribute="leading" secondItem="hEv-34-EJm" secondAttribute="leadingMargin" constant="8" id="fqx-WI-6iN"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="1wJ-1R-AAu" secondAttribute="trailing" constant="8" id="uGg-z2-jqJ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="1dt-d5-1cq" secondAttribute="trailing" constant="8" id="v2M-Jf-hCg"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="coinLogo" destination="1wJ-1R-AAu" id="Hie-v2-48P"/>
+                                            <outlet property="currentPrice" destination="A1T-Ia-rIn" id="SqO-YM-ze4"/>
                                             <outlet property="nameLabel" destination="1dt-d5-1cq" id="ges-4y-seP"/>
                                         </connections>
                                     </collectionViewCell>
@@ -129,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="580b57fcd9996e24bc43c53e" width="1687" height="1687"/>
         <image name="Logo" width="58" height="32"/>
         <image name="ic_add_circle_48pt_3x" width="120" height="120"/>
     </resources>

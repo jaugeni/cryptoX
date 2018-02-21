@@ -36,8 +36,17 @@ class DataService {
                 let imageUrl = coin["ImageUrl"].stringValue
                 let id = coin["Id"].stringValue
                 
-                self.myCoins.append(CoinInfo(symbol: symbol, coinName: coinName, coinID: id, imageUrl: imageUrl, convertTo: convertTo))
-                comletion(true)
+                self.getCurrentPrice(coinSymbol: symbol, currency: convertTo, comletion: { (price, status) in
+                    if status {
+                    self.myCoins.append(CoinInfo(symbol: symbol, coinName: coinName, coinID: id, imageUrl: imageUrl, convertTo: convertTo, currentPrice: price))
+                        comletion(true)
+                    } else {
+                        self.myCoins.append(CoinInfo(symbol: symbol, coinName: coinName, coinID: id, imageUrl: imageUrl, convertTo: convertTo, currentPrice: nil))
+                        comletion(true)
+                    }
+                    
+                })
+                
                 
             } else {
                 comletion(false)
@@ -46,5 +55,43 @@ class DataService {
         }
     }
     
+    func getCurrentPrice(coinSymbol: String, currency: String, comletion: @escaping (_ price: String?, _ status: Bool) -> ()) {
+        let urlPrice = "\(URL_PRICE)\(URL_FSYM)\(coinSymbol)\(URL_TSYMS)\(currency)\(URL_EXTRA)"
+        
+        Alamofire.request(urlPrice).responseJSON { (response) in
+            if response.result.error == nil {
+                guard let data = response.data else {return}
+                let json = JSON(data)
+                let price = json[currency].doubleValue
+                
+                let currensySambol = "\(price)\(self.getSymbolForCurrencyCode(code: currency))"
+                
+                comletion(currensySambol, true)
+                
+                
+            } else {
+                comletion(nil, false)
+                debugPrint(response.result.error as Any)
+            }
+            
+        }
+    }
+    
+    private func getSymbolForCurrencyCode(code: String) -> String {
+        let locale = NSLocale(localeIdentifier: code)
+        if locale.displayName(forKey: .currencySymbol, value: code) == code {
+            let newlocale = NSLocale(localeIdentifier: code.dropLast() + "_en")
+            if let symbol = newlocale.displayName(forKey: .currencySymbol, value: code) {
+                return symbol
+            } else {
+                return code
+            }
+        }
+        if let symbol = locale.displayName(forKey: .currencySymbol, value: code) {
+            return symbol
+        } else {
+            return code
+        }
+    }
     
 }

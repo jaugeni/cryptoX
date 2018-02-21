@@ -19,11 +19,38 @@ class CoinsListVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         coinCollection.delegate = self
         coinCollection.dataSource = self
-        
-        DataService.share.getCoinBaseInfo(coinSymbol: "REBL", convertTo: "USD") { (status) in
+        demoData()
+    }
+    
+    func demoData() {
+        DataService.share.getCoinBaseInfo(coinSymbol: "BTC", convertTo: "USD") { (status) in
             if status {
                 self.coinCollection.reloadData()
-                print(DataService.share.myCoins)
+            }
+        }
+        DataService.share.getCoinBaseInfo(coinSymbol: "ETH", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
+            }
+        }
+        DataService.share.getCoinBaseInfo(coinSymbol: "LTC", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
+            }
+        }
+        DataService.share.getCoinBaseInfo(coinSymbol: "TRX", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
+            }
+        }
+        DataService.share.getCoinBaseInfo(coinSymbol: "XRP", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
+            }
+        }
+        DataService.share.getCoinBaseInfo(coinSymbol: "DASH", convertTo: "USD") { (status) in
+            if status {
+                self.coinCollection.reloadData()
             }
         }
     }
