@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CoinsList: UIViewController {
+class CoinsListVC: UIViewController {
 
     @IBOutlet weak var coinCollection: UICollectionView!
     
@@ -20,7 +20,7 @@ class CoinsList: UIViewController {
         coinCollection.delegate = self
         coinCollection.dataSource = self
         
-        DataService.share.getCoinBaseInfo(coinSymbol: "BTC", convertTo: "USD") { (status) in
+        DataService.share.getCoinBaseInfo(coinSymbol: "REBL", convertTo: "USD") { (status) in
             if status {
                 self.coinCollection.reloadData()
                 print(DataService.share.myCoins)
@@ -32,7 +32,7 @@ class CoinsList: UIViewController {
 
 }
 
-extension CoinsList: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CoinsListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -57,7 +57,7 @@ extension CoinsList: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         let spaceBetweenCells: CGFloat = 10
         let padding: CGFloat = 40
         let cellDimention = ((collectionView.bounds.width - padding) - (numberOfCollums - 1) * spaceBetweenCells) / numberOfCollums
-        return CGSize(width: cellDimention, height: cellDimention + cellDimention / 2)
+        return CGSize(width: cellDimention, height: cellDimention )
         
     }
 

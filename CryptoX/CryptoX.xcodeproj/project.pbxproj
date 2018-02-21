@@ -13,13 +13,15 @@
 		A359D961203DF51400A42F92 /* CoinInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D960203DF51400A42F92 /* CoinInfo.swift */; };
 		A359D965203DF72500A42F92 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D964203DF72500A42F92 /* DataService.swift */; };
 		A359D967203DF88C00A42F92 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D966203DF88C00A42F92 /* Constant.swift */; };
+		A359D969203E05B700A42F92 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D968203E05B700A42F92 /* CustomImageView.swift */; };
+		A359D96B203E08CF00A42F92 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D96A203E08CF00A42F92 /* MyTableViewCell.swift */; };
+		A359D96D203E08E000A42F92 /* TwitterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D96C203E08E000A42F92 /* TwitterVC.swift */; };
 		A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */; };
-		A3F0C235203CBE2B0099EE2E /* CoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C234203CBE2B0099EE2E /* CoinsList.swift */; };
+		A3F0C235203CBE2B0099EE2E /* CoinsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C234203CBE2B0099EE2E /* CoinsListVC.swift */; };
 		A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C236203CBE2B0099EE2E /* Main.storyboard */; };
 		A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C239203CBE2B0099EE2E /* Assets.xcassets */; };
 		A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */; };
 		E0A1A74EEFD7358FE87E6CEB /* Pods_CryptoX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B78877C1CB759A6175979 /* Pods_CryptoX.framework */; };
-		F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */; };
 		F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7348C0B203CE064001D683C /* Twitter.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -32,15 +34,17 @@
 		A359D960203DF51400A42F92 /* CoinInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInfo.swift; sourceTree = "<group>"; };
 		A359D964203DF72500A42F92 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A359D966203DF88C00A42F92 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A359D968203E05B700A42F92 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		A359D96A203E08CF00A42F92 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		A359D96C203E08E000A42F92 /* TwitterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterVC.swift; sourceTree = "<group>"; };
 		A3F0C22F203CBE2B0099EE2E /* CryptoX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3F0C234203CBE2B0099EE2E /* CoinsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsList.swift; sourceTree = "<group>"; };
+		A3F0C234203CBE2B0099EE2E /* CoinsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListVC.swift; sourceTree = "<group>"; };
 		A3F0C237203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3F0C239203CBE2B0099EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F0C23C203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F0C23E203CBE2B0099EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71729D84EDB3F1A92DE7E82 /* Pods-CryptoX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX.debug.xcconfig"; sourceTree = "<group>"; };
-		F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedVC.swift; sourceTree = "<group>"; };
 		F7348C0B203CE064001D683C /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +72,8 @@
 		A359D957203DD65900A42F92 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A3F0C234203CBE2B0099EE2E /* CoinsList.swift */,
+				A3F0C234203CBE2B0099EE2E /* CoinsListVC.swift */,
+				A359D96C203E08E000A42F92 /* TwitterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +84,8 @@
 				A359D95D203DF3A200A42F92 /* CustomButton.swift */,
 				A359D959203DDBF500A42F92 /* CustomBGView.swift */,
 				A359D95B203DE12D00A42F92 /* CustomCollectionCell.swift */,
+				A359D968203E05B700A42F92 /* CustomImageView.swift */,
+				A359D96A203E08CF00A42F92 /* MyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,7 +132,6 @@
 				A359D958203DDBBE00A42F92 /* View */,
 				A359D957203DD65900A42F92 /* Controllers */,
 				F7348C0A203CE03A001D683C /* Storyboards */,
-				F7348BF9203CCA0E001D683C /* Twitter */,
 				CEF611A8203CC66100A945E0 /* Utilities */,
 				A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */,
 				A3F0C239203CBE2B0099EE2E /* Assets.xcassets */,
@@ -149,14 +155,6 @@
 				525B78877C1CB759A6175979 /* Pods_CryptoX.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F7348BF9203CCA0E001D683C /* Twitter */ = {
-			isa = PBXGroup;
-			children = (
-				F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */,
-			);
-			path = Twitter;
 			sourceTree = "<group>";
 		};
 		F7348C0A203CE03A001D683C /* Storyboards */ = {
@@ -308,12 +306,14 @@
 				A359D95A203DDBF500A42F92 /* CustomBGView.swift in Sources */,
 				A359D95C203DE12D00A42F92 /* CustomCollectionCell.swift in Sources */,
 				A359D967203DF88C00A42F92 /* Constant.swift in Sources */,
+				A359D96B203E08CF00A42F92 /* MyTableViewCell.swift in Sources */,
 				A359D95E203DF3A200A42F92 /* CustomButton.swift in Sources */,
-				A3F0C235203CBE2B0099EE2E /* CoinsList.swift in Sources */,
+				A3F0C235203CBE2B0099EE2E /* CoinsListVC.swift in Sources */,
 				A359D961203DF51400A42F92 /* CoinInfo.swift in Sources */,
-				F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */,
 				A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */,
 				A359D965203DF72500A42F92 /* DataService.swift in Sources */,
+				A359D96D203E08E000A42F92 /* TwitterVC.swift in Sources */,
+				A359D969203E05B700A42F92 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
