@@ -12,13 +12,14 @@
 		A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C236203CBE2B0099EE2E /* Main.storyboard */; };
 		A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C239203CBE2B0099EE2E /* Assets.xcassets */; };
 		A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */; };
-		CEF611A6203CC65100A945E0 /* IntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF611A4203CC65100A945E0 /* IntroVC.m */; };
-		CEF611A7203CC65100A945E0 /* IntroVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF611A5203CC65100A945E0 /* IntroVC.xib */; };
+		E0A1A74EEFD7358FE87E6CEB /* Pods_CryptoX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B78877C1CB759A6175979 /* Pods_CryptoX.framework */; };
 		F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */; };
 		F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7348C0B203CE064001D683C /* Twitter.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19C3ACA9F203E3B21A9E6977 /* Pods-CryptoX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoX.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX.release.xcconfig"; sourceTree = "<group>"; };
+		525B78877C1CB759A6175979 /* Pods_CryptoX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F0C22F203CBE2B0099EE2E /* CryptoX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F0C234203CBE2B0099EE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,10 +27,7 @@
 		A3F0C239203CBE2B0099EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F0C23C203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F0C23E203CBE2B0099EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEF611A2203CC65100A945E0 /* CryptoX-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoX-Bridging-Header.h"; sourceTree = "<group>"; };
-		CEF611A3203CC65100A945E0 /* IntroVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroVC.h; sourceTree = "<group>"; };
-		CEF611A4203CC65100A945E0 /* IntroVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroVC.m; sourceTree = "<group>"; };
-		CEF611A5203CC65100A945E0 /* IntroVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroVC.xib; sourceTree = "<group>"; };
+		D71729D84EDB3F1A92DE7E82 /* Pods-CryptoX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX.debug.xcconfig"; sourceTree = "<group>"; };
 		F7348C06203CDAC9001D683C /* TwitterFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFeedVC.swift; sourceTree = "<group>"; };
 		F7348C0B203CE064001D683C /* Twitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Twitter.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A1A74EEFD7358FE87E6CEB /* Pods_CryptoX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		774E4DBAAA712950D25EC30E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D71729D84EDB3F1A92DE7E82 /* Pods-CryptoX.debug.xcconfig */,
+				19C3ACA9F203E3B21A9E6977 /* Pods-CryptoX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A3F0C226203CBE2B0099EE2E = {
 			isa = PBXGroup;
 			children = (
 				A3F0C231203CBE2B0099EE2E /* CryptoX */,
 				A3F0C230203CBE2B0099EE2E /* Products */,
+				774E4DBAAA712950D25EC30E /* Pods */,
+				EF727816EDB658879365B75C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +77,6 @@
 				F7348C0A203CE03A001D683C /* Storyboards */,
 				F7348BF9203CCA0E001D683C /* Twitter */,
 				CEF611A8203CC66100A945E0 /* Utilities */,
-				CEF6119D203CC5AF00A945E0 /* Introduction */,
 				A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */,
 				A3F0C234203CBE2B0099EE2E /* ViewController.swift */,
 				A3F0C239203CBE2B0099EE2E /* Assets.xcassets */,
@@ -77,22 +86,19 @@
 			path = CryptoX;
 			sourceTree = "<group>";
 		};
-		CEF6119D203CC5AF00A945E0 /* Introduction */ = {
-			isa = PBXGroup;
-			children = (
-				CEF611A3203CC65100A945E0 /* IntroVC.h */,
-				CEF611A4203CC65100A945E0 /* IntroVC.m */,
-				CEF611A5203CC65100A945E0 /* IntroVC.xib */,
-			);
-			path = Introduction;
-			sourceTree = "<group>";
-		};
 		CEF611A8203CC66100A945E0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				CEF611A2203CC65100A945E0 /* CryptoX-Bridging-Header.h */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EF727816EDB658879365B75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				525B78877C1CB759A6175979 /* Pods_CryptoX.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F7348BF9203CCA0E001D683C /* Twitter */ = {
@@ -119,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3F0C241203CBE2B0099EE2E /* Build configuration list for PBXNativeTarget "CryptoX" */;
 			buildPhases = (
+				A8DE06411AE386EF90CAA7D6 /* [CP] Check Pods Manifest.lock */,
 				A3F0C22B203CBE2B0099EE2E /* Sources */,
 				A3F0C22C203CBE2B0099EE2E /* Frameworks */,
 				A3F0C22D203CBE2B0099EE2E /* Resources */,
+				78F71C0C37C3864A9DB9320A /* [CP] Embed Pods Frameworks */,
+				8FBAC81116E950071C379FAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,18 +185,72 @@
 				F7348C0C203CE064001D683C /* Twitter.storyboard in Resources */,
 				A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */,
 				A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */,
-				CEF611A7203CC65100A945E0 /* IntroVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78F71C0C37C3864A9DB9320A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FBAC81116E950071C379FAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8DE06411AE386EF90CAA7D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3F0C22B203CBE2B0099EE2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF611A6203CC65100A945E0 /* IntroVC.m in Sources */,
 				A3F0C235203CBE2B0099EE2E /* ViewController.swift in Sources */,
 				F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */,
 				A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */,
@@ -325,6 +388,7 @@
 		};
 		A3F0C242203CBE2B0099EE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71729D84EDB3F1A92DE7E82 /* Pods-CryptoX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -343,6 +407,7 @@
 		};
 		A3F0C243203CBE2B0099EE2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C3ACA9F203E3B21A9E6977 /* Pods-CryptoX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

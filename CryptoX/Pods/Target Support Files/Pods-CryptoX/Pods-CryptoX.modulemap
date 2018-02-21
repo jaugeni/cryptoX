@@ -1,0 +1,6 @@
+framework module Pods_CryptoX {
+  umbrella header "Pods-CryptoX-umbrella.h"
+
+  export *
+  module * { export * }
+}
