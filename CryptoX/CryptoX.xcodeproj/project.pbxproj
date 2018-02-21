@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A359D95A203DDBF500A42F92 /* CustomBGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D959203DDBF500A42F92 /* CustomBGView.swift */; };
+		A359D95C203DE12D00A42F92 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359D95B203DE12D00A42F92 /* CustomCollectionCell.swift */; };
 		A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */; };
-		A3F0C235203CBE2B0099EE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C234203CBE2B0099EE2E /* ViewController.swift */; };
+		A3F0C235203CBE2B0099EE2E /* CoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0C234203CBE2B0099EE2E /* CoinsList.swift */; };
 		A3F0C238203CBE2B0099EE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C236203CBE2B0099EE2E /* Main.storyboard */; };
 		A3F0C23A203CBE2B0099EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C239203CBE2B0099EE2E /* Assets.xcassets */; };
 		A3F0C23D203CBE2B0099EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */; };
@@ -20,9 +22,11 @@
 /* Begin PBXFileReference section */
 		19C3ACA9F203E3B21A9E6977 /* Pods-CryptoX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoX.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX.release.xcconfig"; sourceTree = "<group>"; };
 		525B78877C1CB759A6175979 /* Pods_CryptoX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A359D959203DDBF500A42F92 /* CustomBGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBGView.swift; sourceTree = "<group>"; };
+		A359D95B203DE12D00A42F92 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		A3F0C22F203CBE2B0099EE2E /* CryptoX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3F0C234203CBE2B0099EE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3F0C234203CBE2B0099EE2E /* CoinsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsList.swift; sourceTree = "<group>"; };
 		A3F0C237203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3F0C239203CBE2B0099EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F0C23C203CBE2B0099EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A359D957203DD65900A42F92 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3F0C234203CBE2B0099EE2E /* CoinsList.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A359D958203DDBBE00A42F92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A359D959203DDBF500A42F92 /* CustomBGView.swift */,
+				A359D95B203DE12D00A42F92 /* CustomCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A3F0C226203CBE2B0099EE2E = {
 			isa = PBXGroup;
 			children = (
@@ -74,11 +95,12 @@
 		A3F0C231203CBE2B0099EE2E /* CryptoX */ = {
 			isa = PBXGroup;
 			children = (
+				A359D958203DDBBE00A42F92 /* View */,
+				A359D957203DD65900A42F92 /* Controllers */,
 				F7348C0A203CE03A001D683C /* Storyboards */,
 				F7348BF9203CCA0E001D683C /* Twitter */,
 				CEF611A8203CC66100A945E0 /* Utilities */,
 				A3F0C232203CBE2B0099EE2E /* AppDelegate.swift */,
-				A3F0C234203CBE2B0099EE2E /* ViewController.swift */,
 				A3F0C239203CBE2B0099EE2E /* Assets.xcassets */,
 				A3F0C23B203CBE2B0099EE2E /* LaunchScreen.storyboard */,
 				A3F0C23E203CBE2B0099EE2E /* Info.plist */,
@@ -199,11 +221,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoX/Pods-CryptoX-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F0C235203CBE2B0099EE2E /* ViewController.swift in Sources */,
+				A359D95A203DDBF500A42F92 /* CustomBGView.swift in Sources */,
+				A359D95C203DE12D00A42F92 /* CustomCollectionCell.swift in Sources */,
+				A3F0C235203CBE2B0099EE2E /* CoinsList.swift in Sources */,
 				F7348C08203CDAC9001D683C /* TwitterFeedVC.swift in Sources */,
 				A3F0C233203CBE2B0099EE2E /* AppDelegate.swift in Sources */,
 			);
@@ -398,7 +424,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.beco.CryptoX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Utilities/CryptoX-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,7 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.beco.CryptoX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CryptoX/Utilities/CryptoX-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
