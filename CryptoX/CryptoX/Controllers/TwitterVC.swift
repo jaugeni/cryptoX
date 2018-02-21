@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPickerViewDelegate, UIPickerViewDataSource{
     
@@ -14,7 +15,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     @IBOutlet weak var pickerOutlet: UIPickerView!
     
     
-    
+    var namePicked = String()
     var tweet : [String] = []
     
     func getArray (dictonaryName : [String : String])-> [String]{
@@ -40,6 +41,35 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     
     
     
+    func changeName () -> [String : String] {
+    
+        if namePicked == "Bitcoin" {
+            return bitcoin
+        }
+        if namePicked == "Ripple" {
+            return ripple
+        }
+        if namePicked == "Litcoin" {
+            return litcoin
+        }
+        if namePicked == "Dash"{
+            return dash
+        }
+        if namePicked == "Etherum" {
+            return ethereum
+        }
+        if namePicked == "tron" {
+            return tron
+        }
+        
+        return litcoin
+
+        
+    }
+    
+    
+    
+    
     var pickerData = [[String]()]
     
     override func viewDidLoad() {
@@ -61,7 +91,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 
-        return getArray(dictonaryName: litcoin).count
+        return getArray(dictonaryName: changeName()).count
 
         
     }
@@ -70,16 +100,16 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
         
         
         
-        return getArray(dictonaryName: litcoin)[row]
+        return getArray(dictonaryName: changeName())[row]
         
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
     
-        let nameOfPicked = getArray(dictonaryName: litcoin)[row]
+        let nameOfPicked = getArray(dictonaryName: changeName())[row]
         
-        getStuff(pickTwitter: litcoin[nameOfPicked]!)
+        getStuff(pickTwitter: changeName()[nameOfPicked]!)
         
         
         
@@ -91,7 +121,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     
     
     
-    @IBOutlet weak var myTextField: UITextField!
+    
     
     @IBOutlet weak var myImageView: UIImageView!
     
@@ -165,13 +195,15 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     }
     
     func updateImage(url : String) {
-        let url = URL(string: url)
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            DispatchQueue.main.async {
-                self.myImageView.image = UIImage(data : data!)
-            }
-        }
-        task.resume()
+        
+        myImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
+//        let url = URL(string: url)
+//        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+//            DispatchQueue.main.async {
+//                self.myImageView.image = UIImage(data : data!)
+//            }
+//        }
+//        task.resume()
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
