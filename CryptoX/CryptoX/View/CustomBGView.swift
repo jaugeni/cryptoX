@@ -14,7 +14,7 @@ class CustomBGView: UIView {
         
         let topColor = #colorLiteral(red: 0.1321582198, green: 0.4862704277, blue: 0.758523643, alpha: 1)
         
-        let bottonColor = #colorLiteral(red: 0.06778045744, green: 0.770924747, blue: 0.8256981969, alpha: 1)
+        let bottonColor = #colorLiteral(red: 0.06666666667, green: 0.7725490196, blue: 0.8274509804, alpha: 1)
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [topColor.cgColor, bottonColor.cgColor]

@@ -11,22 +11,30 @@ import SDWebImage
 
 class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPickerViewDelegate, UIPickerViewDataSource{
     
-    
-    @IBOutlet weak var pickerOutlet: UIPickerView!
-    
-    
     var namePicked = ""
     var tweet : [String] = []
     
-    func getArray (dictonaryName : [String : String])-> [String]{
-        let pickedkey =  Array(dictonaryName.keys)
+    @IBOutlet weak var pickerOutlet: UIPickerView!
+    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        return pickedkey
+        pickerOutlet.dataSource = self
+        pickerOutlet.delegate = self
         
+        myTableView.separatorColor = #colorLiteral(red: 0.06666666667, green: 0.7725490196, blue: 0.8274509804, alpha: 1)
         
+        let nameOfPicked = getArray(dictonaryName: changeName())[0]
+        getStuff(pickTwitter: changeName()[nameOfPicked]!)
     }
     
-    
+    func getArray (dictonaryName : [String : String])-> [String]{
+        let pickedkey =  Array(dictonaryName.keys)
+        return pickedkey
+    }
     
     let famousCyrpto = ["Bitcoin", "Ripple", "Litcoin", "DigitalCash", "Ethereum", "Tronix"]
     
@@ -37,11 +45,8 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     let ethereum = ["Ethereum/Verified":"https://twitter.com/ethereumproject", "Ethereum Classics":"https://twitter.com/EthereumClassic", "":""]
     let tron = ["Tron Foundation/Verified" :"https://twitter.com/Tronfoundation", "Justin Sun/ Founder":"https://twitter.com/justinsuntron"]
     
-    
-    
-    
     func changeName () -> [String : String] {
-    
+        
         if namePicked == "Bitcoin" {
             return bitcoin
         }
@@ -62,72 +67,37 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
         }
         
         return litcoin
-
         
     }
-    
-    
-    
     
     var pickerData = [[String]()]
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-        pickerOutlet.dataSource = self
-        pickerOutlet.delegate = self
-        
-        
-        
-        
-       
-    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-
-        return getArray(dictonaryName: changeName()).count
-
         
+        return getArray(dictonaryName: changeName()).count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        
-        
         return getArray(dictonaryName: changeName())[row]
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-    
         let nameOfPicked = getArray(dictonaryName: changeName())[row]
-        
         getStuff(pickTwitter: changeName()[nameOfPicked]!)
-        
-        
-        
-        
-        
-        
     }
     
-    
-    
-    
-    
-    
-    @IBOutlet weak var myImageView: UIImageView!
-    
-    
-    @IBOutlet weak var myLabel: UILabel!
-    
-    @IBOutlet weak var myTableView: UITableView!
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if tweet.count == 0 {
+            return 0
+        }
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweet.count
@@ -135,18 +105,14 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for : indexPath) as! MyTableViewCell
+        //        let currentTwit = tweet[indexPath.row]
+        //        if currentTwit == " " || currentTwit == "." || currentTwit != " " {
         cell.myTextView.text = tweet[indexPath.row]
+        //        }
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
         return cell
     }
-    
-//    @IBAction func search(_ sender: Any) {
-//        
-//        if myTextField.text?.isEmpty == false {
-//            let user = myTextField.text?.replacingOccurrences(of: " ", with: "")
-//            getStuff(user: user!)
-//            
-//        }
-//    }
     
     func getStuff(pickTwitter : String) {
         
@@ -179,6 +145,7 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
                 
                 for i in 0...array.count-1{
                     let newTweet = array[i].components(separatedBy: "<")
+                    print("twit\(i): \(newTweet)\n\n\n")
                     array[i] = newTweet[0]
                 }
                 self.tweet = array
@@ -196,25 +163,15 @@ class TwitterVC: UIViewController, UITabBarDelegate, UITableViewDataSource ,UIPi
     func updateImage(url : String) {
         
         myImageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
-//        let url = URL(string: url)
-//        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-//            DispatchQueue.main.async {
-//                self.myImageView.image = UIImage(data : data!)
-//            }
-//        }
-//        task.resume()
         
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
 }
