@@ -58,6 +58,7 @@ class CoinsListVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? TwitterVC {
+                
                 destination.namePicked = pickedCoin
             }
     
@@ -97,9 +98,9 @@ extension CoinsListVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: SEGUE_TO_TWITTER, sender: nil)
         pickedCoin = DataService.share.myCoins[indexPath.row].coinName
+        performSegue(withIdentifier: SEGUE_TO_TWITTER, sender: collectionView)
+        
     }
     
     
